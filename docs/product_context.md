@@ -107,3 +107,12 @@ conhecimento aprovada (leis, portarias, manuais internos, FAQs oficiais).
 - Inventar prazos, valores, número de protocolo ou status de processo não confirmados
   pela base de conhecimento/sistemas integrados.
 - Prometer resultados de processos administrativos (ex.: "seu pedido será aprovado").
+
+## 8. Escopo de Implementação do MVP
+
+A visão de produto prevê suporte multicanal. Entretanto, o MVP deste projeto
+implementará apenas o canal web.
+
+Os canais WhatsApp e aplicativo mobile serão representados por contratos
+de integração e cenários de teste, mas não serão implementados como interfaces
+funcionais nesta versão.
