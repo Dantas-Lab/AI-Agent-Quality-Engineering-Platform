@@ -1,0 +1,52 @@
+{
+  "failure_categories": [
+    {
+      "id": "FC-001",
+      "name": "hallucination",
+      "description": "The assistant generates information unsupported by the knowledge base.",
+      "severity": "critical"
+    },
+    {
+      "id": "FC-002",
+      "name": "incorrect_retrieval",
+      "description": "The retriever returns irrelevant or incorrect documents.",
+      "severity": "high"
+    },
+    {
+      "id": "FC-003",
+      "name": "missing_information",
+      "description": "The response omits information required to answer the question.",
+      "severity": "high"
+    },
+    {
+      "id": "FC-004",
+      "name": "incorrect_source_attribution",
+      "description": "The response references sources that do not support the answer.",
+      "severity": "high"
+    },
+    {
+      "id": "FC-005",
+      "name": "privacy_violation",
+      "description": "The assistant exposes or requests protected personal information.",
+      "severity": "critical"
+    },
+    {
+      "id": "FC-006",
+      "name": "out_of_scope_response",
+      "description": "The assistant answers questions outside the supported knowledge domain.",
+      "severity": "medium"
+    },
+    {
+      "id": "FC-007",
+      "name": "incorrect_refusal",
+      "description": "The assistant refuses a valid request that could be answered from the knowledge base.",
+      "severity": "medium"
+    },
+    {
+      "id": "FC-008",
+      "name": "inconsistent_response",
+      "description": "Equivalent questions produce materially contradictory answers.",
+      "severity": "high"
+    }
+  ]
+}
