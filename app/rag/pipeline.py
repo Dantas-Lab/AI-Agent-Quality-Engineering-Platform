@@ -14,7 +14,10 @@ class RAGPipeline:
         self.prompt_builder = prompt_builder
         self.llm = llm
 
-    def run(self, question: str) -> tuple[str, list[RetrievedDocument]]:
+    def run(
+        self,
+        question: str,
+    ) -> tuple[str, list[RetrievedDocument]]:
         documents = self.retriever.retrieve(question)
 
         prompt = self.prompt_builder.build(
@@ -22,6 +25,6 @@ class RAGPipeline:
             documents=documents,
         )
 
-        answer = self.llm.generate_response(prompt)
+        answer = self.llm.generate(prompt)
 
         return answer, documents

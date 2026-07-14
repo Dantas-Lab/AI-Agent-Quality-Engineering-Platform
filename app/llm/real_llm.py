@@ -1,5 +1,4 @@
 import os
-from typing import cast
 
 from openai import OpenAI
 
@@ -16,4 +15,5 @@ class RealLLM:
             input=prompt,
         )
 
-        return cast(str, response.output_text)
+        output: str = response.output_text
+        return output
