@@ -1,0 +1,5 @@
+CHAT_REQUEST_RECEIVED = "chat_request_received"
+RETRIEVAL_COMPLETED = "retrieval_completed"
+RESPONSE_GENERATED = "response_generated"
+DATABASE_ERROR = "database_error"
+LLM_ERROR = "llm_error"

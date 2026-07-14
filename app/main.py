@@ -11,8 +11,11 @@ from app.api.routes.chat import router as chat_router  # noqa: E402
 from app.api.routes.health import router as health_router  # noqa: E402
 from app.database import models  # noqa: E402, F401
 from app.database.connection import Base, engine  # noqa: E402
+from app.observability.logger import configure_logging  # noqa: E402
 
 Base.metadata.create_all(bind=engine)
+
+configure_logging()
 
 app = FastAPI(
     title="AI Agent Quality Engineering Platform",
