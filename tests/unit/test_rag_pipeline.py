@@ -21,7 +21,7 @@ def test_rag_pipeline_uses_retriever_and_llm() -> None:
     retriever.retrieve.return_value = retrieved_documents
 
     llm = Mock()
-    llm.generate_response.return_value = "Generated answer"
+    llm.generate.return_value = "Generated answer"
 
     pipeline = RAGPipeline(
         retriever=retriever,
@@ -36,4 +36,4 @@ def test_rag_pipeline_uses_retriever_and_llm() -> None:
 
     retriever.retrieve.assert_called_once_with("Which documents are required?")
 
-    llm.generate_response.assert_called_once()
+    llm.generate.assert_called_once()
