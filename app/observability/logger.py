@@ -48,4 +48,5 @@ def configure_logging() -> None:
 
 
 def get_logger() -> BoundLogger:
-    return structlog.get_logger()
+    logger: BoundLogger = structlog.get_logger()
+    return logger

@@ -67,6 +67,9 @@ jobs:
       - name: Security tests
         run: pytest -m security
 
+      - name: Ingest knowledge base
+        run: python -m scripts.knowledge_base.ingest_documents
+
       - name: Regression tests
         run: pytest -m regression
 
