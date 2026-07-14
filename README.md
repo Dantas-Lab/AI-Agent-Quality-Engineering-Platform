@@ -1,46 +1,67 @@
 # AI Agent Quality Engineering Platform
 
-Quality Engineering platform for testing and evaluating a RAG-based conversational AI agent.
+A Quality Engineering platform designed to validate, test, monitor, and analyze a Retrieval-Augmented Generation (RAG) AI assistant.
 
-## Project Objective
+The project demonstrates how traditional Software Quality Engineering practices can be extended to AI-based systems through automated testing, deterministic AI evaluation, retrieval validation, security testing, observability, regression prevention, and CI/CD quality gates.
 
-Build and validate a conversational AI system for citizen services using a complete Quality Engineering approach, including requirements, risk-based testing, automated testing, LLM evaluation, observability, regression testing, and CI/CD quality gates.
+## Project Overview
 
-## Core Technologies
+The application simulates a Citizen Services AI Assistant that answers questions using information retrieved from a controlled knowledge base.
 
-- Python
-- FastAPI
-- Pytest
-- LangChain
-- ChromaDB
-- DeepEval
-- Playwright
-- SQLite
-- SQLAlchemy
-- Amazon CloudWatch
-- Docker
-- GitHub Actions
+The main objective is not only to build an AI application, but to demonstrate how to engineer and validate its quality.
 
-## Project Roadmap
+The platform covers:
 
-The project is developed incrementally, from Quality Engineering planning to a complete automated quality validation pipeline.
+- RAG pipeline validation
+- deterministic AI evaluation
+- Golden Dataset testing
+- retrieval quality validation
+- source attribution testing
+- AI security testing
+- failure classification
+- quality scorecards
+- release criteria
+- API testing
+- E2E testing
+- regression testing
+- structured logging
+- observability
+- CI/CD quality gates
 
-## Current Status
+## Architecture
 
-- [x] Phase 0 — Quality Engineering Planning
-- [x] Phase 1 — Bootstrap and Architecture
-- [ ] Phase 2 — System Under Test Development
-- [ ] Phase 3 — Database and SQL
-- [ ] Phase 4 — RAG and AI Agent
-- [ ] Phase 5 — Pytest Automation Foundation
-- [ ] Phase 6 — API Testing
-- [ ] Phase 7 — Logs and Amazon CloudWatch
-- [ ] Phase 8 — AI Quality Strategy
-- [ ] Phase 9 — LLM Testing with DeepEval
-- [ ] Phase 10 — Conversation Analysis and Quality Scorecard
-- [ ] Phase 11 — LLM Security Testing
-- [ ] Phase 12 — Playwright E2E
-- [ ] Phase 13 — Bug Investigation and Regression Testing
-- [ ] Phase 14 — CI/CD and Quality Gates
-- [ ] Phase 15 — Docker and Reproducible Execution
-- [ ] Phase 16 — Portfolio and Interview Preparation
+The application follows a modular architecture:
+
+```text
+User
+  |
+  v
+Web Interface
+  |
+  v
+FastAPI
+  |
+  v
+RAG Pipeline
+  |
+  +-------------------+
+  |                   |
+  v                   v
+Retriever          Prompt Builder
+  |
+  v
+ChromaDB
+  |
+  v
+Knowledge Base
+  |
+  v
+LLM Provider
+  |
+  +-------------------+
+  |                   |
+  v                   v
+Fake LLM           Real LLM
+                        |
+                        v
+                    OpenAI API
