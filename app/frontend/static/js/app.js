@@ -20,9 +20,15 @@ chatForm.addEventListener("submit", async (event) => {
 
     const data = await response.json();
 
+    const sources = data.sources.length > 0
+        ? data.sources.join(", ")
+        : "No sources available";
+
     messages.innerHTML += `
         <p><strong>User:</strong> ${message}</p>
         <p><strong>Assistant:</strong> ${data.answer}</p>
+        <p><strong>Sources:</strong> ${sources}</p>
+        <hr>
     `;
 
     messageInput.value = "";

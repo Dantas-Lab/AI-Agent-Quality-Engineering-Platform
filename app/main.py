@@ -1,13 +1,16 @@
 from pathlib import Path
 
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from app.api.routes.chat import router as chat_router
-from app.api.routes.health import router as health_router
-from app.database import models  # noqa: F401
-from app.database.connection import Base, engine
+load_dotenv()
+
+from app.api.routes.chat import router as chat_router  # noqa: E402
+from app.api.routes.health import router as health_router  # noqa: E402
+from app.database import models  # noqa: E402, F401
+from app.database.connection import Base, engine  # noqa: E402
 
 Base.metadata.create_all(bind=engine)
 
